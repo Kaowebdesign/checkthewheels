@@ -1,0 +1,31 @@
+//-Переменные блока Footer-//
+-
+	var FooterLink=[['О сервисе','#about'],['Связь с нами'],['Стать специалистом','#']];
+	var m=FooterLink.length;
+	var Socials=[['../img/ic-facebook.png',
+					'../img/ic-facebook@2x.png 2x, ../img/ic-facebook@3x.png 3x','Facebook','#'],
+					['../img/ic-vk.png',
+					'../img/ic-vk@2x.png 2x, ../img/ic-vk@3x.png 3x','Vkontakte','#'],
+					['../img/ic-instagram.png',
+					'../img/ic-instagram@2x.png 2x, ../img/ic-instagram@3x.png 3x','Instagram','#']];
+	var k=Socials.length;
+//-Блока Footer-//
+footer.footer
+	.footer__container
+		.footer__nav
+			ul.footer__navItems
+				-for(i=0;i<m;i++)
+					li.footer__item
+						a(href=FooterLink[i][1]).footer__link=FooterLink[i][0]
+		hr
+		.footer__bottom
+			.footer__left
+				.footer__logo
+					img(src="../img/footer.png" alt="LOGO").footer__logos
+					img(src="../img/logo2.png" alt="LOGO").footer__logoImg
+				p.footer__author 2017 &copy;Checkthewheels.com
+			ul.footer__socials
+				-for(i=0;i<k;i++)
+					li.footer__socItem
+						a(href=Socials[i][3]).footer__socLink
+							img(src=Socials[i][0] srcset=Socials[i][1] alt=Socials[i][2])

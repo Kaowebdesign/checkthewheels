@@ -1,0 +1,103 @@
+/*Основные шаблоны для HEADER*/
+%HeaderFlex{
+	display: flex;
+	flex-direction:row;
+	flex-wrap:nowrap;	
+}
+/*Стили для головы*/
+
+.container{
+	width: 1160px;
+	@extend %HeaderFlex;
+}
+
+.header{
+	@extend %HeaderFlex;
+	justify-content:center;
+	margin-top:25px;
+	height:50px;
+	font-size: 14px;
+	width:100%;
+
+	&__container{
+		width: 1160px;
+		@extend %HeaderFlex;
+		justify-content:space-between;
+	}
+
+	&__logo{
+		@extend %HeaderFlex;
+		width: 226px;
+		height: 39px;
+		align-items:center;
+	}
+
+	&__image{
+		display: flex;
+		width: 39px;
+  		height: 39px;
+  		object-fit: contain;
+	}
+	/*Стили для Menu-bars*/
+	&__menu{
+		display: none;
+	}
+
+	&__menuItems{
+		display: flex;
+		flex-direction:column;
+		justify-content:space-around;
+		width: 24px;
+		height: 22px;
+		cursor: pointer;
+	}
+
+	&__menuItem{
+		display: flex;
+		width: 100%;
+		height: 2px;
+		background-color: #64656e;
+		border-radius: 20px;
+	}
+
+	&__menuCaption{
+		display: flex;
+		margin-left: 10px;
+		font-family: Roboto;
+		font-size: 16px;
+		font-weight: 300;
+		letter-spacing: 0.2px;
+		color: #64656e;
+	}
+
+	&__link{
+		@extend %HeaderFlex;
+		justify-content:center;
+		align-items:center;
+		margin-right: 14px;
+		margin-top: 3px;
+		width: 248px;
+  		height: 44px;
+  		border-radius: 5px;
+ 		background-color: #ffffff;
+  		border: solid 1px $BasicElemColor;
+  		text-decoration: none;
+  		transition:0.5s;
+
+  		&:hover{
+  			background-color: $BasicElemColor;
+  		}
+	}
+
+	&__text{
+		display: flex;
+  		text-align: center;
+  		width: 145px;
+		height: 16px;
+		font-family: Roboto;
+		font-size: 1em;
+		font-weight: 500;
+		letter-spacing: 0.4px;
+		color: #64656e;
+	}
+}

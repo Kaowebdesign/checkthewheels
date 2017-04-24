@@ -1,0 +1,79 @@
+//-Переменнные блока MAIN-//
+-
+	var ServiceContent=[['../img/ic-1-simplicity.png',
+					'../img/ic-1-simplicity@2x.png 2x, ../img/ic-1-simplicity@3x.png 3x','.main__iconSimpliti',
+					'Просто','Несколько шагов и специалист осматривает автомобиль перед покупкой.'],
+					['../img/ic-2-suitable.png',
+					'../img/ic-2-suitable@2x.png 2x, ../img/ic-2-suitable@3x.png 3x','.main__iconSuitable',
+					'Удобно','Проводите осмотр - где угодно и когда угодно.'],
+					['../img/ic-3-handshake.png',
+					'../img/ic-3-handshake@2x.png 2x, ../img/ic-3-handshake@3x.png 3x','.main__iconHandshake',
+					'Легко','Услуги оказывают только тщательно подобранные специалисты.']];
+	var n=ServiceContent.length;
+	var selecteds=[['Город','text','Днепропетровск','town',
+					['Днепр','Кременчуг','Харьков','Ивано-Франковск']],
+					['Дата и время','text','20 февраля 20:30','date',
+					['Днепр','Кременчуг','Харьков','Ивано-Франковск']],
+					['Марка автомобиля','text','Ford','auto',
+					['Днепр','Кременчуг','Харьков','Ивано-Франковск']],
+					['Модель автомобиля','text','Focus','model',
+					['Днепр','Кременчуг','Харьков','Ивано-Франковск']]];
+	var selectTown=[['Днепр','Кременчуг','Харьков','Ивано-Франковск'],
+					['Днепр','Кременчуг','Харьков','Ивано-Франковск'],
+					['Ford','DAEWOO','Honda','BMW'],
+					['Focus','Lanos','Dio','x6']];
+//-Блок MAIN-//
+main.main
+	.main__container
+		section.main__captions
+			h1.main__first-caption Хотите купить машину и не отдать все деньги на ремонт?
+			h2.main__second-caption Найдите себе&nbsp; 
+				span.main__specialist специалиста&nbsp; 
+				| для осмотра автомобиля.
+		section.main__services
+			h1.main__littleCaption Воспользуйтесь услугами проверенных специалистов
+			form(action="#" name="master" method="get").main__inputs
+				.main__selects
+					-for(i=0;i<selecteds.length;i++)
+						.main__selecteds
+							.main__form
+								label(for=selecteds[i][3]).main__label=selecteds[i][0]
+								input(
+									type=selecteds[i][1]
+									placeholder=selecteds[i][2]
+									id=selecteds[i][3]
+									).main__input
+							.main__selectImg
+									img(src="../img/ic-arrow-down.png" alt="arrow-down").main__image
+							div.main__select
+								ul.selItems
+									li.selItem=selectTown[i][0]
+									li.selItem=selectTown[i][1]
+									li.selItem=selectTown[i][2]
+									li.selItem=selectTown[i][3]
+				button(
+					type="submit"
+					name="FormSub").main__submit Подобрать мастера
+			span.main__more Узнать больше
+			a(href="#about").main__showArrow
+		section.main__about#about
+			h1.main__caption О сервисе
+			.main__items
+				-for(i=0;i<n;i++)
+					article.main__item
+						img(src=ServiceContent[i][0]
+						srcset=ServiceContent[i][1]
+						class=ServiceContent[i][2] alt="Icon Service")
+						h2.main__itemCaption=ServiceContent[i][3]
+						p.main__serviceText=ServiceContent[i][4]
+		section.main__opinion
+			h1.main__opinionCaption Нам важно ваше мнение
+			form(action="#" method="get" name=phone).main__opitionForm
+				input(
+					type=tel
+					placeholder='Телефон').main__phone
+				button(
+					type="submit"
+					name="Phone").main__opitionButton Отправить запрос
+
+

@@ -1,0 +1,125 @@
+/*=====Основные шаблоны для работы=====*/
+%itemses{
+	display: inline-block;
+	list-style-type: none;
+	transition:0.5s;
+}
+/*=====Стили блока Footer=====*/
+.footer{
+	width: 100%;
+	@extend %ColumnFlex;
+	align-items:center;
+	font-size: 16px;
+	margin-top: 100px;
+	margin-bottom: 5px;
+
+	&__container{
+		width: 1144px;
+		
+	}
+
+	&__nav{
+		display: flex;
+		justify-content:flex-end;
+	}
+
+	hr{
+		width:1140px;
+		height: 2px;
+		margin-top: 15px;
+		border: solid 1px rgba(151, 151, 151, 0.3);
+	}
+
+	&__item{
+		@extend %itemses;
+
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+
+	&__item:first-child{
+		margin-right: 40px;
+	}
+
+	&__item{
+		margin-right: 40px;
+	}
+
+	&__item:last-child{
+		margin-right: 4px;
+	}
+
+	&__link{
+		text-decoration: none;
+		font-family: Noto Sans;
+ 		font-size: 1em;
+  		letter-spacing: 0.5px;
+  		text-align: left;
+  		color: #64656e;
+	}
+
+	&__bottom{
+		display: flex;
+		justify-content:space-between;
+		margin-top: 15.5px;
+	}
+
+	&__left{
+		@extend %MainFlex;
+		@extend %FlexAlign;
+	}
+
+	&__logo{
+		display: flex;
+		@extend %FlexAlign;
+		width: 53px;
+  		height: 53px;
+  		cursor: pointer;
+
+  		&:hover{
+			opacity: 0.8;
+		}
+	}
+
+	&__logoImg{
+		width: 37px;
+  		height: 44px;
+	}
+
+	&__logos{
+		display: none;
+		width:49px;
+		height: 30px;
+	}
+
+	&__author{
+		font-family: Roboto;
+		font-size: 10px;
+		font-weight: 300;
+		letter-spacing: 0.8px;
+		color: #868791;
+	}
+
+	&__socials{
+		margin-top: 5px;
+	}
+
+	&__socItem{
+		@extend %itemses;
+		object-fit: contain;
+		transition:0.5s;
+		
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+
+	&__socItem:nth-child(1){
+		margin-right: 10px;
+	}
+
+	&__socItem:nth-child(2){
+		margin-right: 10.6px;
+	}
+}

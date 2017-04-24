@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Check The Wheels</title>
+    <link rel="stylesheet" type="text/css" href="css/libs.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="by Andrey Karnaukh">
+    <script src="js/libs.min.js"></script>
+    <script src="js/common.js"></script>
+  </head>
+  <body> 
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo"><img class="header__imageLeft" src="../img/logoLeft.png" alt="Check The Wheels"><img class="header__image" src="../img/mobile/logo.png" alt="Check The Wheels"><img class="header__imageRight" src="../img/logoText.png" alt="Check The Wheels"></div>
+        <div class="header__menu">
+          <div class="header__menuItems"><i class="header__menuItem"></i><i class="header__menuItem"></i><i class="header__menuItem"></i></div><span class="header__menuCaption">Меню</span>
+        </div><a class="header__link" href="#"> <span class="header__text">Стать специалистом</span></a>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__container">
+        <section class="main__captions">
+          <h1 class="main__first-caption">Хотите купить машину и не отдать все деньги на ремонт?</h1>
+          <h2 class="main__second-caption">Найдите себе&nbsp; <span class="main__specialist">специалиста&nbsp; </span>для осмотра автомобиля.</h2>
+        </section>
+        <section class="main__services">
+          <h1 class="main__littleCaption">Воспользуйтесь услугами проверенных специалистов</h1>
+          <form class="main__inputs" action="#" name="master" method="get">
+            <div class="main__selects">
+              <div class="main__selecteds">
+                <div class="main__form">
+                  <label class="main__label" for="town">Город</label>
+                  <input class="main__input" type="text" placeholder="Днепропетровск" id="town">
+                </div>
+                <div class="main__selectImg"><img class="main__image" src="../img/ic-arrow-down.png" alt="arrow-down"></div>
+                <div class="main__select">
+                  <ul class="selItems">
+                    <li class="selItem">Днепр</li>
+                    <li class="selItem">Кременчуг</li>
+                    <li class="selItem">Харьков</li>
+                    <li class="selItem">Ивано-Франковск</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="main__selecteds">
+                <div class="main__form">
+                  <label class="main__label" for="date">Дата и время</label>
+                  <input class="main__input" type="text" placeholder="20 февраля 20:30" id="date">
+                </div>
+                <div class="main__selectImg"><img class="main__image" src="../img/ic-arrow-down.png" alt="arrow-down"></div>
+                <div class="main__select">
+                  <ul class="selItems">
+                    <li class="selItem">Днепр</li>
+                    <li class="selItem">Кременчуг</li>
+                    <li class="selItem">Харьков</li>
+                    <li class="selItem">Ивано-Франковск</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="main__selecteds">
+                <div class="main__form">
+                  <label class="main__label" for="auto">Марка автомобиля</label>
+                  <input class="main__input" type="text" placeholder="Ford" id="auto">
+                </div>
+                <div class="main__selectImg"><img class="main__image" src="../img/ic-arrow-down.png" alt="arrow-down"></div>
+                <div class="main__select">
+                  <ul class="selItems">
+                    <li class="selItem">Ford</li>
+                    <li class="selItem">DAEWOO</li>
+                    <li class="selItem">Honda</li>
+                    <li class="selItem">BMW</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="main__selecteds">
+                <div class="main__form">
+                  <label class="main__label" for="model">Модель автомобиля</label>
+                  <input class="main__input" type="text" placeholder="Focus" id="model">
+                </div>
+                <div class="main__selectImg"><img class="main__image" src="../img/ic-arrow-down.png" alt="arrow-down"></div>
+                <div class="main__select">
+                  <ul class="selItems">
+                    <li class="selItem">Focus</li>
+                    <li class="selItem">Lanos</li>
+                    <li class="selItem">Dio</li>
+                    <li class="selItem">x6</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <button class="main__submit" type="submit" name="FormSub">Подобрать мастера</button>
+          </form><span class="main__more">Узнать больше</span><a class="main__showArrow" href="#about"></a>
+        </section>
+        <section class="main__about" id="about">
+          <h1 class="main__caption">О сервисе</h1>
+          <div class="main__items">
+            <article class="main__item"><img class=".main__iconSimpliti" src="../img/ic-1-simplicity.png" srcset="../img/ic-1-simplicity@2x.png 2x, ../img/ic-1-simplicity@3x.png 3x" alt="Icon Service">
+              <h2 class="main__itemCaption">Просто</h2>
+              <p class="main__serviceText">Несколько шагов и специалист осматривает автомобиль перед покупкой.</p>
+            </article>
+            <article class="main__item"><img class=".main__iconSuitable" src="../img/ic-2-suitable.png" srcset="../img/ic-2-suitable@2x.png 2x, ../img/ic-2-suitable@3x.png 3x" alt="Icon Service">
+              <h2 class="main__itemCaption">Удобно</h2>
+              <p class="main__serviceText">Проводите осмотр - где угодно и когда угодно.</p>
+            </article>
+            <article class="main__item"><img class=".main__iconHandshake" src="../img/ic-3-handshake.png" srcset="../img/ic-3-handshake@2x.png 2x, ../img/ic-3-handshake@3x.png 3x" alt="Icon Service">
+              <h2 class="main__itemCaption">Легко</h2>
+              <p class="main__serviceText">Услуги оказывают только тщательно подобранные специалисты.</p>
+            </article>
+          </div>
+        </section>
+        <section class="main__opinion">
+          <h1 class="main__opinionCaption">Нам важно ваше мнение</h1>
+          <form class="main__opitionForm" action="#" method="get">
+            <input class="main__phone" placeholder="Телефон">
+            <button class="main__opitionButton" type="submit" name="Phone">Отправить запрос</button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__nav">
+          <ul class="footer__navItems">
+            <li class="footer__item"><a class="footer__link" href="#about">О сервисе</a></li>
+            <li class="footer__item"><a class="footer__link">Связь с нами</a></li>
+            <li class="footer__item"><a class="footer__link" href="#">Стать специалистом</a></li>
+          </ul>
+        </div>
+        <hr>
+        <div class="footer__bottom">
+          <div class="footer__left">
+            <div class="footer__logo"><img class="footer__logos" src="../img/footer.png" alt="LOGO"><img class="footer__logoImg" src="../img/logo2.png" alt="LOGO"></div>
+            <p class="footer__author">2017 &copy;Checkthewheels.com</p>
+          </div>
+          <ul class="footer__socials">
+            <li class="footer__socItem"><a class="footer__socLink" href="#"><img src="../img/ic-facebook.png" srcset="../img/ic-facebook@2x.png 2x, ../img/ic-facebook@3x.png 3x" alt="Facebook"></a></li>
+            <li class="footer__socItem"><a class="footer__socLink" href="#"><img src="../img/ic-vk.png" srcset="../img/ic-vk@2x.png 2x, ../img/ic-vk@3x.png 3x" alt="Vkontakte"></a></li>
+            <li class="footer__socItem"><a class="footer__socLink" href="#"><img src="../img/ic-instagram.png" srcset="../img/ic-instagram@2x.png 2x, ../img/ic-instagram@3x.png 3x" alt="Instagram"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

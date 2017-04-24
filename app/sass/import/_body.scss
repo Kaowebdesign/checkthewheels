@@ -1,0 +1,432 @@
+/*=====Основные шаблоны для работы=====*/
+
+/*Основные стили флексов на странице*/
+%MainFlex{
+	display: flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+}
+/*Стили для флексов по вертикали*/
+%ColumnFlex{
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+}
+/*Выравнивание флексов*/
+%FlexAlign{
+	justify-content:center;
+	align-items:center;
+}
+/*Стили для больших заголовков*/
+%CaptionFonts{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 3em;
+	line-height: 1.33;
+  	letter-spacing: 0.5px;
+	color: #64656e;
+}
+/*Стили для селектов*/
+%InputsBorders{
+	display: flex;
+	flex-direction:row;
+	flex-wrap:nowrap;
+	justify-content:space-between;
+	width: 300px;
+	height: 70px;
+	border-radius: 5px;
+	background-color: #ffffff;
+	border: solid 1px #e5e5e5;
+}
+/*Стили для заголовков раздела Сервис*/
+%ServicesCaption{
+	font-family: Noto Sans;
+  	font-size: 2.5em;
+  	font-weight: bold;
+  	line-height: 1.6;
+  	letter-spacing: 0.5px;
+  	text-align: center;
+  	color: #64656e;
+}
+/*Стили текста блоков Сервиса*/
+%serviceText{
+	font-family: Roboto;
+	font-size: 16px;
+	line-height: 1.88;
+	letter-spacing: 1.3px;
+	color: #868791;
+}
+
+%phonePlaceholder{
+	font-family: Roboto;
+  	font-size: 14px;
+ 	font-weight: 300;
+  	letter-spacing: 0.2px;
+  	text-align: left;
+  	color: #868791;
+}
+/*Убираем бордер в инпутов*/
+.forms_focus{
+	outline: 0 !important;
+}
+
+/*=====Стили BODY=====*/
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+/*=====Стили основного контента блока MAIN=====*/
+.main{
+	width: 100%;
+	display: flex;
+	justify-content:center; 
+	padding-top:270px;
+	font-size: 12px;
+
+	&__container{
+		width: 1160px;
+		display: flex;
+		flex-direction:column;
+		align-items:center;
+	}
+	/*Большие заголовки*/
+	&__captions{
+		margin: 0 auto;
+		//@extend %MainFlex;
+		flex-direction:column;
+		//@extend %FlexAlign;
+	}
+	
+	&__first-caption{
+		//display: flex;
+		@extend %CaptionFonts;
+ 		font-weight: bold;
+  		text-align: center;
+	}
+
+	&__second-caption{
+		//display: flex;
+		@extend %CaptionFonts;
+		font-weight: normal;
+		text-align: center;
+	}
+
+	&__specialist{
+		color:$BasicBlue;
+		font-style: italic;
+	}
+	/*Стили раздела сервисов*/
+	&__services{
+		@extend %ColumnFlex;
+	}
+	/*Маленький заголовок для сервисов*/
+	&__littleCaption{
+		text-align: center;
+		font-family: Roboto;
+ 		font-size: 14px;
+  		font-weight: 300;
+  		margin-top: 24px;
+  		margin-bottom: 37px;
+  		//letter-spacing: 0.5px;
+  		color: #64656e;
+	}
+	/*Стили для input-ов*/
+	&__inputs{
+		@extend %ColumnFlex;
+		width: 1230px;
+	}
+	&__selects{
+		@extend %MainFlex;
+		justify-content:space-between;
+		width: 100%;
+	}
+	/*Стили для выпадающего select-а*/
+	&__select{
+			position: absolute;
+			display: none;
+			top:75px;
+			width: 302px;
+			background-color: $BasicWhite;
+			border-radius: 5px;
+			background-color: #ffffff;
+			box-shadow: 0 2px 7px 2px rgba(0, 0, 0, 0.08);
+			border: solid 1px #e5e5e5;
+			z-index: 100;
+
+			&_window{
+				display: block;
+			}
+
+			.selItems{
+				padding-top: 20px;
+				padding-bottom: 20px;
+				padding-left: 20px;
+			}
+
+			.selItem{
+				display: flex;
+				align-items:center;
+				justify-content:space-between;
+				height: 30px;
+				list-style-type: none;
+				font-family: Roboto;
+		  		font-size: 16px;
+				font-weight: 500;
+				letter-spacing: 0.5px;
+				text-align: left;
+				color: #868791;
+				cursor: pointer;
+
+				&:hover{
+					color:$BasicBlue;
+					background-color: rgba(229, 229, 229, 0.3);
+					border-color:$BasicBlue;
+				}
+			}
+
+			.line{
+				width: 3px;
+		  		height: 15px;
+		  		object-fit: contain;
+		  		background-color: #05abab;
+		  		opacity: 0;
+			}
+		}
+
+	&__selecteds{
+		position: relative;
+		@extend %InputsBorders;
+
+		&:hover{
+			border-color:$BasicBlue;
+		}
+	}
+
+	&__label{
+		display: flex;
+  		height: 16px;
+  		margin-top:10px;
+  		margin-left:20px;
+  		font-family: Roboto;
+  		font-size: 14px;
+  		font-weight: 500;
+  		letter-spacing: 0.2px;
+  		text-align: left;
+  		color: #868791;
+	}
+
+	&__input{
+		display: flex;
+		@extend .forms_focus;
+		width: 100%;
+  		height: 21px;
+  		margin-top:8px;
+  		margin-left:20px;
+ 		font-family: Roboto;
+  		font-size: 18px;
+  		font-weight: 500;
+  		letter-spacing: 0.5px;
+  		text-align: left;
+	}
+
+	&__selectImg{
+		display: flex;
+		height: 100%;
+		justify-content:center;
+		align-items:center;
+	}
+
+	&__image{
+		@extend .forms_focus;
+		display: flex;
+		width: 14px;
+		height: 14px;
+		margin-right: 15px;
+
+		&_up{
+			transform:rotate(180deg);
+		}
+	}
+
+	&__form{
+		display: flex;
+		flex-direction:column;
+	}
+
+	&__input::input-placeholder{
+		color:$MainPlaceholder;
+	}
+
+	&__input::-webkit-input-placeholder{
+		color:$MainPlaceholder;
+	}
+
+	&__input::-moz-input-placeholder{
+		color:$MainPlaceholder;
+	}
+	/*Стилизация кнопки отправки формы*/
+	&__submit{
+		display: flex;
+		@extend .forms_focus;
+		width: 250px;
+	 	height: 55px;
+	  	border-radius: 5px;
+		background-image: -webkit-linear-gradient(11deg, #16bfac, #05abac);
+		background-image: -o-linear-gradient(11deg, #16bfac, #05abac);
+		background-image: linear-gradient(101deg, #16bfac, #05abac);
+		justify-content:center;
+		align-items:center;
+		margin-top: 25px;
+		font-family: Roboto;
+  		font-size: 14px;
+  		font-weight: 500;
+  		letter-spacing: 0.5px;
+  		text-align: center;
+  		color: $BasicWhite;
+  		transition:0.5s;
+  		cursor: pointer;
+
+  		&:hover{
+  			opacity: 0.8;
+  		}
+	}
+	/*Стили заголовка "узнать больше"*/
+	&__more{
+		display: flex;
+  		font-family: Roboto;
+  		font-size: 10px;
+  		font-weight: 300;
+  		text-align: center;
+  		color: #64656e;
+  		letter-spacing: 0.5px;
+  		margin-top: 110px;
+  		justify-content: center;
+	}
+	/*Стили нижней стрелки*/
+	&__showArrow{
+		display: flex;
+		width: 35px;
+  		height: 35px;
+  		object-fit: contain;
+  		margin-top: 10px;
+  		background-image: url("../img/show-more-icon.png");
+  		background-size: cover;
+	}
+	/*-=Стили блока о сервисе=-*/
+	&__about{
+		@extend %ColumnFlex;
+		width: 100%;
+	}
+	/*Стили общего блока сервисов*/
+	&__items{
+		@extend %MainFlex;
+		margin-top: 73px;
+		width: 100%;
+		justify-content:space-between;
+		align-items:baseline;
+	}
+	/*Стили отдельных блоков сервиса*/
+	&__item{
+		@extend %ColumnFlex;
+		width: 30%;
+	}
+	/*Заголовок Сервисов*/
+	&__caption{
+		width: 162px;
+ 		height: 48px;
+		@extend %ServicesCaption;
+  		margin-top: 99px;
+	}
+
+	/*Заголовки блоков*/
+	&__itemCaption{
+		margin-top: 21px;
+		@extend %ServicesCaption;
+	}
+	/*Стили для иконок*/
+	&__iconSimpliti{
+		margin:auto;
+		width: 83px;
+ 		height: 114px;
+  		object-fit: contain;
+	}
+
+	&__iconSuitable{
+		margin:auto;
+		width: 68px;
+ 		height: 91px;
+  		object-fit: contain;
+	}
+
+	&__iconHandshake{
+		margin:auto;
+		width: 118px;
+ 		height: 78px;
+  		object-fit: contain;
+	}
+	/*Стили для текста*/
+	&__serviceText{
+		@extend %serviceText;
+		margin-top: 15px;
+	}
+
+	&__opinion{
+		width: 100%;
+	}
+
+	&__opinionCaption{
+		@extend %ServicesCaption;
+		padding-bottom: 27px;
+		margin-top: 150px;
+	}
+
+	&__opitionForm{
+		@extend %MainFlex;
+		justify-content:center;
+		margin-top: 14px;
+		width: 100%;
+	}
+
+	&__phone{
+		width: 330px;
+ 		height: 45px;
+ 		padding-left: 25px;
+  		border-radius: 5px;
+  		background-color: #ffffff;
+  		border: solid 1px #e7e7e7;
+  		margin-right: 10px;
+	}
+
+	&__phone::input-placeholder{
+		@extend %phonePlaceholder;
+	}
+
+	&__phone::-webkit-input-placeholder{
+		@extend %phonePlaceholder;
+	}
+
+	&__phone::-moz-input-placeholder{
+		@extend %phonePlaceholder;
+	}
+
+	&__opitionButton{
+		@extend .forms_focus;
+		display: flex;
+		@extend %FlexAlign;
+		width: 260px;
+		padding: 14px 0;
+  		border-radius: 5px;
+  		font-family: Roboto;
+  		font-size: 14px;
+  		font-weight: 500;
+  		letter-spacing: 0.5px;
+  		text-align: center;
+  		color: #ffffff;
+ 		background-image: linear-gradient(98deg, #16bfac, #05abac);
+ 		transition:0.5s;
+
+ 		&:hover{
+ 			opacity: 0.8;
+ 		}
+	}
+
+}
