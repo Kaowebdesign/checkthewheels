@@ -1,4 +1,5 @@
 ### Instuctions to set this app
-<1 class="">git clone https://github.com/Kaowebdesign/gitlab</1>
-<2 class="">npm i</2>
-<3 class="">gulp</3>
+###### To build the project, you must have node.js
+1.  git clone https://github.com/Kaowebdesign/gitlab
+2.  npm i
+3.  gulp
